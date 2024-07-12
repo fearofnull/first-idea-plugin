@@ -10,9 +10,15 @@
 
     <extensions defaultExtensionNs="com.intellij">
         <toolWindow factoryClass="com.github.fearofnull.firstideaplugin.toolWindow.MyToolWindowFactory" id="MyToolWindow"/>
+        <toolWindow factoryClass="com.github.fearofnull.firstideaplugin.listeners.toolWindow.MusicToolWindowFactory" id="MusicToolWindow"/>
     </extensions>
 
     <applicationListeners>
         <listener class="com.github.fearofnull.firstideaplugin.listeners.MyApplicationActivationListener" topic="com.intellij.openapi.application.ApplicationActivationListener"/>
     </applicationListeners>
+    <actions>
+        <action id="com.github.fearofnull.firstideaplugin.listeners.action.MyAction" class="com.github.fearofnull.firstideaplugin.listeners.action.MyAction" text="com.github.fearofnull.firstideaplugin.listeners.action.MyAction" description="com.github.fearofnull.firstideaplugin.listeners.action.MyAction">
+            <add-to-group group-id="MainToolbarCenter" anchor="first"/>
+        </action>
+    </actions>
 </idea-plugin>
